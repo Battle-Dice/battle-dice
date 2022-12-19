@@ -12,10 +12,9 @@
 
 Simple dice game where you pick your dice (constructor) and play against a computer. The user puts username and age (form) for leaderboard later on. The person with a higher roll will get a check and fist person to a certain number of checks will win the game. Displays a separate page or chart that saves the results whether you win or loose (local storage). Stretch goals could be multiplayer or separate game modes.
 
+## Battle Dice Stories
 
-## Battle Dice Stories 
-
-As A User 
+As A User...
 
 - To be able to play a game of chance using dice against the computer
 
@@ -23,8 +22,10 @@ As A User
 
 - Would like the ability to choose between dice types
 
-- Would like to see player name displayed 
+- Would like to see player name displayed
 
 - Would like to see a timer in between rolls
 
-
+![Software Requirements](img/Software%20Requirements.png)
+![User Stories](img/User%20Stories.png)
+![Wireframes](img/Wireframes.png)
