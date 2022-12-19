@@ -1,0 +1,6 @@
+#diceOptions div {
+  border: red 1px solid;
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+}
