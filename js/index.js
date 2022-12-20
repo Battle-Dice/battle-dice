@@ -28,7 +28,6 @@ nameInput.addEventListener('input', function(event){
 
 bloodTypeInput.addEventListener('input', function(event) {
   gameObject.bloodType = event.target.value;
-  console.log(gameObject);
 });
 
 readyToRollButton.addEventListener('click', function() {

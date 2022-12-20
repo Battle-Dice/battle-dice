@@ -1,32 +1,82 @@
 'use strict';
 
-// CHECK LOCAL STORAGE FOR PLAYER NAME/BLOOD TYPE & DICE SIDES
+// DOM ELEMENTS
 
-// USER OBJECT {
-//   name: provide
-//   bt: provide
-// }
+const rollDiceButton = document.getElementById('rollDice');
+const playerDiceDiv = document.getElementById('playerDice');
+const botDiceDiv = document.getElementById('botDice');
+const batttleOutcomeDiv = document.getElementById('battleOutcome');
 
-// dice(SIZE)
+// DEFAULT GAME OBJECT
 
+const gameObject = {
+  name: 'Player 1',
+  bloodType: 'unknown',
+  diceOption: 6,
+};
 
-// function Dice(sides) {
-//   this.diceFacesArray = [];
-  
-//   for (let i = 1; i < sides + 1; i++) {
-//     this.diceFacesArray.push(i);
-//   }
-  
-// }
+const resultsObject = {
+  win: 0,
+  loss: 0,
+  tie: 0,
+  history: []
+};
 
-// Dice.prototype.roll = function() {
-//   const currentRollIndex = Math.floor(Math.random() * this.diceFacesArray.length);
-//   return this.diceFacesArray[currentRollIndex];
-// };
+// LOCAL STORAGE LOAD
 
-// const dice1 = new Dice(12);
+if (localStorage.getItem('gameObject')) {
+  const stringyGameObject = localStorage.getItem('gameObject');
+  const parsedGameObject = JSON.parse(stringyGameObject);
 
-// dice1.roll();
-// dice1.roll();
-// dice1.roll();
-// dice1.roll();
+  gameObject.name = parsedGameObject.name;
+  gameObject.bloodType = parsedGameObject.bloodType;
+  gameObject.diceOption = parsedGameObject.diceOption;
+}
+
+// CONSTRUCTORS
+
+function Dice(diceOption) {
+  this.diceArray = [];
+
+  for (let i = 1; i < diceOption + 1; i++) {
+    this.diceArray.push(i);
+  }
+}
+
+// PROTOTYPE METHODS
+
+Dice.prototype.rollDice = function() {
+  const diceRoll = Math.floor(Math.random() * this.diceArray.length);
+  return diceRoll;
+};
+
+// EVENT LISTENERS
+rollDiceButton.addEventListener('click', function() {
+  const currentDice = new Dice(gameObject.diceOption);
+  const playerRollResult = currentDice.rollDice();
+  const botRollResult = currentDice.rollDice();
+  playerDiceDiv.innerText = playerRollResult;
+  botDiceDiv.innerText = botRollResult;
+
+  const gameResult = {
+    player: playerRollResult,
+    bot: botRollResult,
+    result: null,
+  };
+
+  if (playerRollResult > botRollResult) {
+    resultsObject.win++;
+    gameResult.result = 'Win';
+    batttleOutcomeDiv.innerText = 'You WIN! Keep on rollin!';
+  } else if (playerRollResult < botRollResult) {
+    resultsObject.loss++;
+    gameResult.result = 'Loss';
+    batttleOutcomeDiv.innerText = `You have lost the battle, but we'll send some ${gameObject.bloodType} blood your way.`;
+  } else if (playerRollResult === botRollResult) {
+    gameResult.result = 'Tie';
+    resultsObject.tie++;
+    batttleOutcomeDiv.innerText = 'A tie right next to losing, but for both people.';
+  }
+
+  resultsObject.history.push(gameResult);
+});
