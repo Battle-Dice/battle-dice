@@ -67,15 +67,16 @@ rollDiceButton.addEventListener('click', function() {
   if (playerRollResult > botRollResult) {
     resultsObject.win++;
     gameResult.result = 'Win';
-    batttleOutcomeDiv.innerText = 'You WIN! Keep on rollin!';
+    batttleOutcomeDiv.innerText = 'WIN!';
   } else if (playerRollResult < botRollResult) {
     resultsObject.loss++;
     gameResult.result = 'Loss';
-    batttleOutcomeDiv.innerText = `You have lost the battle, but we'll send some ${gameObject.bloodType} blood your way.`;
+    batttleOutcomeDiv.innerText = 'LOSS!';
+    // `You have lost the battle, but we'll send some ${gameObject.bloodType} blood your way.`;
   } else if (playerRollResult === botRollResult) {
     gameResult.result = 'Tie';
     resultsObject.tie++;
-    batttleOutcomeDiv.innerText = 'A tie right next to losing, but for both people.';
+    batttleOutcomeDiv.innerText = 'DRAW';
   }
 
   resultsObject.history.push(gameResult);

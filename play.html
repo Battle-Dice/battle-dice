@@ -1,51 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/play.css">
   <title>Play Battle Dice</title>
 </head>
+
 <body>
-  <header>
-    <h1>Battle Dice!</h1>
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="/play.html">Play</a>
-      <a href="/about.html">About</a>
-    </nav>
-  </header>
-  <main>
-    <button id="rollDice">Roll</button>
-
-    <div id="playSection">
-      <div id="playerDice">
-
-      </div>
-      <div id="botDice">
-        
-      </div>
+  <header id="image">
+    <div id="top">
+      <div id="sky"></div>
     </div>
+    <div id="bottom">
+      <div id="ground"></div>
+    </div>
+    <div id="text">
+      <h1>Battle Dice</h1>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/play.html">Play</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="userData">
-      <div id="battleOutcome">
+  <main>
+    <div class="space"></div>
+    <div id="controls">
+      <button id="rollDice">Roll! or die...</button>
 
+      <div id="playSection">
+        <div id="playerDice">
+
+        </div>
+        <div id="botDice">
+
+        </div>
       </div>
-      <canvas>
 
-      </canvas>
+      <section id="userData">
+        <!-- <h2>OUTCOME</h2> -->
+        <h1 id="battleOutcome">
+          
+        </h1>
 
+        
+
+        <canvas> <!-- REMOVE IF LEADERBOARD CHART NOT USED -->
+
+        </canvas>
+    </div>
     </section>
+
+    
 
   </main>
 
+  <div id="textResults">
+    <h2>LEADERBOARD</h2>
+    <p>WIN LOSS draws</p>
+    <p>HISTORY</p>
+  </div>
+
   <footer>
-    <p>&copy; Battle Dice 2022</p>
-    <p>Battle Dice &trade; is not responcible for any blood work/blood draws/loss of conciousness and/or gambling addictions from playing Battle Dice &trade;. Please seek immediate medical attention apon any blood loss not related to Battle Dice &trade;.</p>
+    <p class="copyright">
+      &copy; Battle Dice 2022
+    </p>
+    <p class="disclaimer">
+      *Battle Dice&trade; is not responsible for any blood work, blood draws, loss of conciousness, and/or gambling
+      addictions connected to playing Battle Dice&trade;. Please seek immediate medical attention upon any blood loss
+      not related to Battle Dice&trade;.
+    </p>
   </footer>
-  
+
   <script src="js/app.js"></script>
 </body>
+
 </html>
