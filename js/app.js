@@ -112,3 +112,5 @@ if (localStorage.getItem('gameObject')) {
 const currentDice = new Dice(gameObject.diceOption);
 playerNameElement.innerText = gameObject.name;
 botNameElement.innerText = 'Bot';
+botDiceDiv.innerText = gameObject.diceOption;
+playerDiceDiv.innerText = gameObject.diceOption;
