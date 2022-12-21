@@ -1,56 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/index.css">
   <title>Battle Dice!</title>
-
 </head>
 
 <body>
-  <header>
-    <h1>Battle Dice!</h1>
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="/play.html">Play</a>
-      <a href="/about.html">About</a>
-    </nav>
+
+  <header id="image">
+    <div id="top">
+      <div id="sky"></div>
+    </div>
+    <div id="bottom">
+      <div id="ground"></div>
+    </div>
+    <div id="text">
+      <h1>Battle Dice</h1>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/play.html">Play</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
   </header>
+
   <main>
-    <fieldset id="playerInput">
-      <legend>Player Info</legend>
+    <div class="space"></div>
+    <div id="playerInput">
+      <h3>Player Info</h3>
+      <fieldset>
 
-      <label for="nameInput">Name</label>
-      <input type="text" name="nameInput" id="nameInput">
+        <label for="nameInput">Name
+          <input type="text" name="nameInput" id="nameInput">
+        </label>
 
-      <label for="bloodTypeInput">Blood Type</label>
-      <input type="text" name="bloodTypeInput" id="bloodTypeInput">
-    </fieldset>
 
+        <label for="bloodTypeInput">Blood Type
+          <input type="text" name="bloodTypeInput" id="bloodTypeInput">
+        </label>
+
+
+      </fieldset>
+    </div>
+
+    <h2>Choose Your Dice!</h2>
     <div id="diceOptions">
-      <h2>Choose Your Dice!</h2>
+      
     </div>
 
     <button id="readyToRollButton">Ready to ROLL!</button>
 
-    <section id="userData">
-
-      <canvas>
-        
-      </canvas>
-
-    </section>
-
   </main>
 
   <footer>
-    <p>&copy; Battle Dice 2022</p>
-    <p>Battle Dice &trade; is not responcible for any blood work/blood draws/loss of conciousness and/or gambling addictions from playing Battle Dice &trade;. Please seek immediate medical attention apon any blood loss not related to Battle Dice &trade;.</p>
+    <p class="copyright">
+      &copy; Battle Dice 2022
+    </p>
+    <p class="disclaimer">
+      *Battle Dice&trade; is not responsible for any blood work, blood draws, loss of conciousness, and/or gambling
+      addictions connected to playing Battle Dice&trade;. Please seek immediate medical attention upon any blood loss
+      not related to Battle Dice&trade;.
+    </p>
   </footer>
-  
+
   <script src="js/index.js"></script>
 </body>
+
 </html>
