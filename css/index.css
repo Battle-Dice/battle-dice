@@ -105,7 +105,11 @@ nav {
   text-shadow: 0 0 3px magenta, 0 0 7px magenta, 0 0 15px black, 0 0 15px black;
 }
 
-h1, h2, h3, button, #battleOutcome {
+h1,
+h2,
+h3,
+button,
+#battleOutcome {
   color: transparent;
   font-family: "Russo One", sans-serif;
   text-transform: uppercase;
@@ -121,18 +125,6 @@ h1, h2, h3, button, #battleOutcome {
 
 header h1 {
   transform: translatey(25px);
-}
-
-h1 {
-  font-size: 6em;
-}
-
-h2 {
-  font-size: 4em;
-}
-
-h3 {
-  font-size: 2em;
 }
 
 /* BACKGROUND ANIMATION STYLES */
@@ -160,6 +152,21 @@ main .space {
   }
 }
 
+/* MAIN STYLES */
+
+h1 {
+  font-size: 6em;
+}
+
+h2 {
+  font-size: 4em;
+  margin-top: 5%;
+}
+
+h3 {
+  font-size: 2em;
+  margin-top: 5%;
+}
 
 main {
   width: 90%;
@@ -183,15 +190,7 @@ main {
 fieldset {
   display: flex;
   flex-direction: column;
-}
-
-label:first-child {
-  padding: 0;
-  margin-top: 15%;
-}
-
-label:last-child {
-  padding: 0;
+  margin-top: 5%;
   margin-bottom: 5%;
 }
 
@@ -206,16 +205,36 @@ label:last-child {
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;
-  padding: 50px;
-  border: black solid 1px;
-  background-color: white;
+  align-content: center;
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+  border: white solid 3px;
+  background-color: rgb(255, 0, 255);
   font-size: 2em;
   font-weight: bold;
+  margin-right: 10%;
+  border-style: ridge;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: "Russo One", sans-serif;
 }
 
 #diceOptions div:hover {
   cursor: pointer;
-  box-shadow: -2px 5px rgb(201, 2, 201);
+  filter: drop-shadow(0 0 15px rgb(201, 2, 201)) drop-shadow(0 0 0px rgb(201, 2, 201)) contrast(1) brightness(1);
+}
+
+label {
+  padding-right: 7px;
+}
+
+button {
+  margin-bottom: 10%;
+  font-size: 2em;
+  cursor: pointer;
 }
 
 /* FOOTER STYLES */

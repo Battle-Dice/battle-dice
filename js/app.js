@@ -53,6 +53,9 @@ rollDiceButton.addEventListener('click', function() {
   playerDiceDiv.innerText = playerRollResult;
   botDiceDiv.innerText = botRollResult;
 
+  botDiceDiv.classList.toggle('clicked');
+  playerDiceDiv.classList.toggle('reverseClicked');
+
   const gameResult = {
     player: playerRollResult,
     bot: botRollResult,
@@ -87,6 +90,12 @@ rollDiceButton.addEventListener('click', function() {
     rollHistoryTr.appendChild(rollHistoryTd);
   }
   tableFootHeaders.after(rollHistoryTr);
+
+  function diceToggle() {
+    botDiceDiv.classList.toggle('clicked');
+    playerDiceDiv.classList.toggle('reverseClicked');
+  }
+  setTimeout(diceToggle, 2100);
 });
 
 // LOCAL STORAGE LOAD
