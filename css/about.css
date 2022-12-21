@@ -1,3 +1,5 @@
+/* HEADER  STYLES */
+
 @import url("https://fonts.googleapis.com/css2?family=Russo+One&family=Yellowtail&display=swap");
 
 :root {
@@ -8,13 +10,11 @@
 }
 
 body {
-  background: black;
+  background-color: black;
 }
 
 header {
-  width: 100vw;
-  height: 100vh;
-
+  width: 100%;
   display: grid;
   place-items: center;
   filter: saturate(130%) contrast(125%);
@@ -96,12 +96,19 @@ header {
   justify-content: center;
 }
 
-h1 {
+nav {
+  margin-top: 2vw;
+  color: white;
+  font-family: "Yellowtail", cursive;
+  font-weight: 100;
+  font-size: 3em;
+  text-shadow: 0 0 3px magenta, 0 0 7px magenta, 0 0 15px black, 0 0 15px black;
+}
+
+h1, h2 {
   color: transparent;
   font-family: "Russo One", sans-serif;
   text-transform: uppercase;
-  font-size: 6em;
-  transform: translatey(25px);
   background: linear-gradient(cornflowerblue 30%,
       white,
       darkmagenta 60%,
@@ -110,27 +117,17 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-stroke: 1px silver;
   filter: drop-shadow(5px 5px 1px black) drop-shadow(1px 1px 1px magenta);
-  /* animation: bg-shift 0.5s ease-in-out infinite alternate; */
 }
 
-nav {
-  margin-top: 1vw;
-  color: white;
-  font-family: "Yellowtail", cursive;
-  font-weight: 100;
-  font-size: 3em;
-  /* 	transform: translatey(-10px) rotatez(-5deg); */
-  text-shadow: 0 0 3px magenta, 0 0 7px magenta, 0 0 15px black, 0 0 15px black;
-  /* animation: hover 1s ease-in-out infinite; */
+header h1 {
+  transform: translatey(25px);
 }
 
-main {
-  display: absolute;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-
+h1 {
+  font-size: 6em;
 }
+
+/* BACKGROUND ANIMATION STYLES */
 
 main .space {
   position: fixed;
@@ -142,12 +139,12 @@ main .space {
   border-radius: 50%;
   box-shadow: -24vw -44vh 2px 2px #fff, 38vw -4vh 0px 0px #fff, -20vw -48vh 1px 2px #fff, -39vw 38vh 3px 1px #fff, -42vw -11vh 0px 3px #fff, 12vw 15vh 3px 3px #fff, 42vw 6vh 3px 2px #fff, -8vw 9vh 0px 2px #fff, 34vw -38vh 1px 0px #fff, -17vw 45vh 3px 1px #fff, 22vw -36vh 3px 2px #fff, -42vw 1vh 1px 0px #fff;
 
-  animation: zoom 5s alternate infinite;
+  animation: zoom 20s alternate infinite;
 }
 
 @keyframes zoom {
   0% {
-    transform: scale(0.25);
+    transform: scale(0.5);
   }
 
   100% {
@@ -155,19 +152,31 @@ main .space {
   }
 }
 
-main h1 {
-  text-align: center;
+/* MAIN STYLES */
+
+main {
   display: absolute;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+h2 {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 4em;
 }
 
 main h3 {
   font-weight: bold;
   margin-top: 15%;
+  font-size: 2em;
 }
 
 .aboutDiv {
   margin-top: 10%;
-  background-color: rgb(126, 126, 202);
+  background-color: rgba(110, 145, 248, 0.336);
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -208,28 +217,24 @@ main h3 {
   height: 45%;
 }
 
-/* FOOTER */
+/* FOOTER STYLES */
 
 footer {
   width: 90%;
   clear: both;
   margin: auto;
+  padding: .2em;
   color: white;
   box-shadow: 0 0 0.2em #79F;
   border: 6px #FF10F0 solid;
-  border-radius: 30p
+  text-align: center;
 }
 
 .copyright {
-  font-size: 40px;
-  display: flex;
-  justify-content: center;
+  font-size: 1.5em;
 }
 
 .disclaimer {
-  font-size: 5px;
+  font-size: 0.5em;
   color: grey;
-  width: auto;
-  height: 10px;
-  margin: 10px;
 }
