@@ -15,6 +15,7 @@ body {
 
 header {
   width: 100vw;
+  height: 100vh;
   display: grid;
   place-items: center;
   filter: saturate(130%) contrast(125%);
@@ -96,6 +97,36 @@ header {
   justify-content: center;
 }
 
+
+h1 {
+  font-size: 6em;
+}
+
+h2 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h1, h2, h3, button {
+  color: transparent;
+  font-family: "Russo One", sans-serif;
+  text-transform: uppercase;
+  
+  transform: translatey(25px);
+  background: linear-gradient(cornflowerblue 30%,
+      white,
+      darkmagenta 60%,
+      cornflowerblue 100%);
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px silver;
+  filter: drop-shadow(5px 5px 1px black) drop-shadow(1px 1px 1px magenta);
+  /* animation: bg-shift 0.5s ease-in-out infinite alternate; */
+}
+
 nav {
   margin-top: 1vw;
   color: white;
@@ -132,78 +163,32 @@ main .space {
   }
 }
 
-
-h1 {
-  font-size: 6em;
-}
-
-h2 {
-  font-size: 4em;
-}
-
-h2 {
-  font-size: 2em;
-}
-
-h1, h2, h3 {
-  color: transparent;
-  font-family: "Russo One", sans-serif;
-  text-transform: uppercase;
-  
-  transform: translatey(25px);
-  background: linear-gradient(cornflowerblue 30%,
-      white,
-      darkmagenta 60%,
-      cornflowerblue 100%);
-  background-size: contain;
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 1px silver;
-  filter: drop-shadow(5px 5px 1px black) drop-shadow(1px 1px 1px magenta);
-  /* animation: bg-shift 0.5s ease-in-out infinite alternate; */
-}
+/* MAIN STYLES */
 
 main {
-  width: 90%;
   margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color:rgba(110, 145, 248, 0.336);
+  width: 70%;
+  border-radius: 20px;
+}
+
+#controls {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-#playerInput {
-  border-radius: 20px;
-  margin-top: 10%;
-  background-color: rgb(126, 126, 202);
-  padding-left: 5%;
-  padding-right: 5%;
-  box-shadow: 5px 10px cyan;
-  /* box-shadow: 5px 10px rgb(201, 2, 201); */
-}
-
-fieldset {
-  display: flex;
   flex-direction: column;
 }
 
-label:first-child {
-  padding: 0;
-  margin-top: 15%;
-}
-
-label:last-child {
-  padding: 0;
-  margin-bottom: 5%;
-}
-
-#diceOptions {
+#playSection {
   width: 70%;
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
 
-#diceOptions div {
+#botDice, #playerDice {
   margin-top: 100px;
   margin-bottom: 100px;
   text-align: center;
@@ -214,9 +199,20 @@ label:last-child {
   font-weight: bold;
 }
 
-#diceOptions div:hover {
-  cursor: pointer;
-  box-shadow: -2px 5px rgb(201, 2, 201);
+button {
+  margin: 1em;
+  font-size: 3em;
+}
+
+#textResults {
+  width: 70%;
+  height: 150px;
+  background-color:rgba(110, 145, 248, 0.336);
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  text-align: center;
 }
 
 /* FOOTER STYLES */
