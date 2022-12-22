@@ -29,3 +29,5 @@ As A User...
 ![Software Requirements](img/Software%20Requirements.png)
 ![User Stories](img/User%20Stories.png)
 ![Wireframes](img/Wireframes.png)
+
+[Code Source] CodePen Home'80s Inspired Pure CSS graphics: <https://codepen.io/curley/pen/zYrpVXb>
