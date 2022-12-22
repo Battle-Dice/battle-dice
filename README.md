@@ -29,3 +29,11 @@ As A User...
 ![Software Requirements](img/Software%20Requirements.png)
 ![User Stories](img/User%20Stories.png)
 ![Wireframes](img/Wireframes.png)
+
+## Resources:
+
+- [One-div-space](https://dev.to/0shuvo0/pure-css-infinite-spacegalaxy-with-just-one-div-4o02)
+- 
+- 
+- 
+- 
